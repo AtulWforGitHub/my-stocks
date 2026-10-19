@@ -1,0 +1,36 @@
+{
+ "outcome": "skipped",
+ "run_date": "2026-10-20",
+ "finished_at": "2026-10-19T21:13:44+00:00",
+ "mode": "real",
+ "provider": "",
+ "price_date": null,
+ "failed_requests": 0,
+ "email": {
+  "status": "not attempted",
+  "note": ""
+ },
+ "notes": [
+  "Skipped: NSE holiday: Dussehra. The last good report is kept."
+ ],
+ "next_run": "2026-10-21T17:00+05:30",
+ "runs": [
+  {
+   "date": "2026-10-16",
+   "status": "OK",
+   "notes": ""
+  }
+ ],
+ "error": null,
+ "last_success": {
+  "finished_at": "2026-10-16T14:17:01+00:00",
+  "run_date": "2026-10-16",
+  "price_date": "2026-10-16",
+  "mode": "real"
+ },
+ "last_failure": {
+  "at": "2026-10-19T21:13:44+00:00",
+  "run_date": "2026-10-20",
+  "why": "skipped"
+ }
+}

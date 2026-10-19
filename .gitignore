@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+demo_output/
+demo_state/
+output/
+.pytest_cache/
+
+.venv/
+logs/
+run-mis.bat
+Open-MIS.bat

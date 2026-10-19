@@ -1,0 +1,46 @@
+name: Update dashboard
+on:
+  schedule:
+    - cron: "30 11 * * 1-5"      # 17:00 IST, Mon-Fri, after the NSE close (GitHub may run a few minutes late)
+    - cron: "30 14 * * 1-5"      # 20:00 IST safety net: does nothing if the 17:00 run already finished (idempotent)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-run even if today's update already finished"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: mis-daily
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Self-test (stops the update if the code is broken)
+        run: |
+          python -m pytest -q tests
+          node --test tests/logic.test.js tests/ledger.test.js
+      - name: Fetch prices and rebuild the dashboard
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          MIS_EMAIL_TO: ${{ secrets.MIS_EMAIL_TO }}
+          MIS_PASSPHRASE: ${{ secrets.MIS_PASSPHRASE }}
+        run: |
+          for attempt in 1 2 3; do
+            python -m mis.run --fill ${{ inputs.force && '--force' || '' }} && exit 0
+            echo "attempt $attempt failed; waiting before retry"; sleep 180
+          done
+          exit 1
+      - name: Publish (commit the new dashboard, or the failure status)
+        if: always()
+        run: bash scripts/publish.sh
