@@ -9081,5 +9081,28 @@
   "most_recent_quarter": 1782777600,
   "retrieved_at": "2026-10-16T14:15:44+00:00",
   "schema": 2
+ },
+ "MTARTECH.NS": {
+  "available": true,
+  "market_cap_cr": 22079.2356864,
+  "roe": 0.1622116714643538,
+  "roe_derived": true,
+  "op_margin": 0.20892,
+  "rev_growth": 1.304,
+  "earn_growth": 3.639,
+  "debt_to_equity": 0.45777999999999996,
+  "fcf_cr": null,
+  "ocf_cr": null,
+  "trailing_pe": 165.42982,
+  "forward_pe": 42.05038,
+  "pb": 26.834648,
+  "ev_ebitda": 97.687,
+  "insider_pct": 0.292,
+  "is_financial": false,
+  "industry": "Specialty Industrial Machinery",
+  "last_fiscal_year_end": 1774915200,
+  "most_recent_quarter": 1782777600,
+  "retrieved_at": "2026-10-20T18:34:53+00:00",
+  "schema": 2
  }
 }
