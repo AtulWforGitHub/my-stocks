@@ -1,10 +1,10 @@
 {
  "outcome": "ok",
- "run_date": "2026-10-26",
- "finished_at": "2026-10-26T17:40:52+00:00",
+ "run_date": "2026-10-27",
+ "finished_at": "2026-10-26T20:02:53+00:00",
  "mode": "real",
  "provider": "yfinance (Yahoo Finance, unofficial; end-of-day/delayed)",
- "price_date": "2026-10-26",
+ "price_date": "2026-10-23",
  "failed_requests": 0,
  "email": {
   "status": "not configured",
@@ -12,10 +12,16 @@
  },
  "notes": [
   "Universe: NSE Midcap 150 + Smallcap 250 lists (395 companies).",
-  "Screened 395 companies; 120 passed the first quality screen."
+  "Screened 395 companies; 120 passed the first quality screen.",
+  "No new market bar: latest Nifty 50 data is 2026-10-23, expected 2026-10-26. Possible unlisted holiday or provider delay. Advice uses the older data and is labelled with its date."
  ],
  "next_run": "2026-10-27T17:00+05:30",
  "runs": [
+  {
+   "date": "2026-10-27",
+   "status": "OK",
+   "notes": "Add GMAIL_APP_PASSWORD and MIS_EMAIL_TO secrets to enable email."
+  },
   {
    "date": "2026-10-26",
    "status": "OK",
@@ -44,9 +50,9 @@
  ],
  "error": null,
  "last_success": {
-  "finished_at": "2026-10-26T17:40:52+00:00",
-  "run_date": "2026-10-26",
-  "price_date": "2026-10-26",
+  "finished_at": "2026-10-26T20:02:53+00:00",
+  "run_date": "2026-10-27",
+  "price_date": "2026-10-23",
   "mode": "real"
  },
  "last_failure": {
