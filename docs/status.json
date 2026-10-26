@@ -1,20 +1,26 @@
 {
- "outcome": "skipped",
- "run_date": "2026-10-24",
- "finished_at": "2026-10-23T18:32:17+00:00",
+ "outcome": "ok",
+ "run_date": "2026-10-26",
+ "finished_at": "2026-10-26T17:40:52+00:00",
  "mode": "real",
- "provider": "",
- "price_date": null,
+ "provider": "yfinance (Yahoo Finance, unofficial; end-of-day/delayed)",
+ "price_date": "2026-10-26",
  "failed_requests": 0,
  "email": {
-  "status": "not attempted",
-  "note": ""
+  "status": "not configured",
+  "note": "Add GMAIL_APP_PASSWORD and MIS_EMAIL_TO secrets to enable email."
  },
  "notes": [
-  "Skipped: weekend. The last good report is kept."
+  "Universe: NSE Midcap 150 + Smallcap 250 lists (395 companies).",
+  "Screened 395 companies; 120 passed the first quality screen."
  ],
- "next_run": "2026-10-26T17:00+05:30",
+ "next_run": "2026-10-27T17:00+05:30",
  "runs": [
+  {
+   "date": "2026-10-26",
+   "status": "OK",
+   "notes": "Add GMAIL_APP_PASSWORD and MIS_EMAIL_TO secrets to enable email."
+  },
   {
    "date": "2026-10-23",
    "status": "OK",
@@ -38,9 +44,9 @@
  ],
  "error": null,
  "last_success": {
-  "finished_at": "2026-10-22T18:41:41+00:00",
-  "run_date": "2026-10-23",
-  "price_date": "2026-10-21",
+  "finished_at": "2026-10-26T17:40:52+00:00",
+  "run_date": "2026-10-26",
+  "price_date": "2026-10-26",
   "mode": "real"
  },
  "last_failure": {
