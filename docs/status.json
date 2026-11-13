@@ -1,7 +1,7 @@
 {
  "outcome": "skipped",
  "run_date": "2026-11-14",
- "finished_at": "2026-11-13T18:37:53+00:00",
+ "finished_at": "2026-11-13T20:56:36+00:00",
  "mode": "real",
  "provider": "",
  "price_date": null,
@@ -94,7 +94,7 @@
   "mode": "real"
  },
  "last_failure": {
-  "at": "2026-11-13T18:37:53+00:00",
+  "at": "2026-11-13T20:56:36+00:00",
   "run_date": "2026-11-14",
   "why": "skipped"
  }
